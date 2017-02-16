@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package mika;
+option java_package = "mika.proto";
+option java_outer_classname = "CondorSubmitProtos";
+
+message CondorSubmitFile {
+  string name = 1;
+
+  string output = 2;
+  string error = 3;
+  string log = 4;
+
+  enum UniverseType {
+    STANDARD = 0;
+    VANILLA = 1;
+    JAVA = 2;
+  }
+
+}
